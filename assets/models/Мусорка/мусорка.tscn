@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmqjljfc03guv"]
+
+[ext_resource type="PackedScene" uid="uid://cqi10aasc88sa" path="res://assets/models/Мусорка/Мусорка.glb" id="1_t744l"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t744l"]
+height = 0.5111084
+radius = 0.5292969
+
+[node name="Мусорка" instance=ExtResource("1_t744l")]
+
+[node name="Cylinder" parent="." index="0"]
+transform = Transform3D(0.34026426, 0, 0, 0, 0.9329733, 0, 0, 0, 0.34026426, 0, 0.24, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder" index="0"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/StaticBody3D" index="0"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999997, 0, 0, 0, 0.99999994, 0, -0.006652713, 0)
+shape = SubResource("CylinderShape3D_t744l")

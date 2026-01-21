@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqsaqb01w15uc"
+path="res://.godot/imported/Попытка открыть дверь.mp3-c8436311ad0759acab2c8853be17a8bf.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Попытка открыть дверь.mp3"
+dest_files=["res://.godot/imported/Попытка открыть дверь.mp3-c8436311ad0759acab2c8853be17a8bf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

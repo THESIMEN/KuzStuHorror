@@ -1,0 +1,230 @@
+[gd_scene load_steps=24 format=3 uid="uid://cn04ffk7efyf8"]
+
+[ext_resource type="PackedScene" uid="uid://qtrbfrlwc7uk" path="res://assets/models/кузачСнаружи/кузач_снаружи.tscn" id="1_jwwum"]
+[ext_resource type="PackedScene" uid="uid://cbjc82ahrxgs" path="res://scenes/player/player.tscn" id="2_trs54"]
+[ext_resource type="PackedScene" uid="uid://1vory8b56wgu" path="res://assets/models/асфальт/асфальт.tscn" id="3_5rqk3"]
+[ext_resource type="PackedScene" uid="uid://dsevpkmtv4g4w" path="res://assets/models/стелла/стелла.tscn" id="4_g4hte"]
+[ext_resource type="PackedScene" uid="uid://bal035vhyr2r5" path="res://assets/models/машины/мерс/мерин.tscn" id="6_j3sab"]
+[ext_resource type="PackedScene" uid="uid://uejjwvccom2y" path="res://assets/models/машины/сузуки/сузуки.tscn" id="7_l7a0y"]
+[ext_resource type="Texture2D" uid="uid://dr8tx1b184me4" path="res://assets/texture/небо.png" id="8_l7a0y"]
+[ext_resource type="PackedScene" uid="uid://bx7vqd0yxxly7" path="res://assets/models/деревоСтатуяСветится/дерево_статуя_светится_красный.tscn" id="8_pm81o"]
+[ext_resource type="PackedScene" uid="uid://dmqjljfc03guv" path="res://assets/models/Мусорка/мусорка.tscn" id="9_qhojc"]
+[ext_resource type="PackedScene" uid="uid://b4xjccsrd8i67" path="res://assets/models/Лавка/лавка.tscn" id="10_h835n"]
+[ext_resource type="PackedScene" uid="uid://bl7pri7s1tffi" path="res://assets/models/растительность/растительность.tscn" id="11_70ag4"]
+[ext_resource type="PackedScene" uid="uid://dmwh0p8j3htmg" path="res://assets/models/фонарь/фонарь.tscn" id="11_sxx71"]
+[ext_resource type="PackedScene" uid="uid://bagafawhw21f7" path="res://assets/models/знакСтоянкаЗапрещена/знак_стоянка_запрещена.tscn" id="12_70ag4"]
+[ext_resource type="PackedScene" uid="uid://c0dl7c1wofnf4" path="res://assets/models/кубСтатуя/куб_статуя.tscn" id="13_gab25"]
+[ext_resource type="Script" uid="uid://cee1l5ygixu1l" path="res://scripts/base/test_cube.gd" id="16_p4e3b"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qhojc"]
+panorama = ExtResource("8_l7a0y")
+filter = false
+
+[sub_resource type="Sky" id="Sky_h835n"]
+sky_material = SubResource("PanoramaSkyMaterial_qhojc")
+
+[sub_resource type="Environment" id="Environment_sxx71"]
+background_mode = 2
+sky = SubResource("Sky_h835n")
+fog_enabled = true
+fog_light_color = Color(0.047303528, 0.05725912, 0.07124821, 1)
+fog_density = 0.04
+fog_sky_affect = 0.85
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+volumetric_fog_emission = Color(0.03385328, 0.033853274, 0.0338533, 1)
+
+[sub_resource type="FogMaterial" id="FogMaterial_n7i5v"]
+density = 0.1899
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n7i5v"]
+size = Vector3(2.4345703, 4.8433228, 57.608437)
+
+[sub_resource type="FogMaterial" id="FogMaterial_p4e3b"]
+density = 0.18
+emission = Color(0.19140625, 0.18916321, 0.18916321, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7iiha"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7w3by"]
+
+[node name="Локация1" type="Node3D"]
+
+[node name="world" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="world"]
+environment = SubResource("Environment_sxx71")
+
+[node name="границы" type="Node3D" parent="world"]
+
+[node name="FogVolume" type="FogVolume" parent="world/границы"]
+transform = Transform3D(0.88987863, 0, 0.3100251, 0, 1, 0, -0.45619735, 0, 0.60474855, 47.35173, 0.27471924, -62.983276)
+size = Vector3(14.133057, 3.3179932, 97.6066)
+material = SubResource("FogMaterial_n7i5v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="world/границы/FogVolume"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="world/границы/FogVolume/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -4.328987, 0.9234009, 1.7920876)
+shape = SubResource("BoxShape3D_n7i5v")
+
+[node name="FogVolume2" type="FogVolume" parent="world/границы"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.67958546, 55.36414, 0.27471924, -10.805452)
+size = Vector3(14.133057, 3.3179932, 124.09342)
+material = SubResource("FogMaterial_n7i5v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="world/границы/FogVolume2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="world/границы/FogVolume2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -4.328987, 0.9234009, 2.5736647)
+shape = SubResource("BoxShape3D_n7i5v")
+
+[node name="FogVolume3" type="FogVolume" parent="world/границы"]
+transform = Transform3D(-1, 0, -5.941125e-08, 0, 1, 0, 8.742278e-08, 0, -0.67958546, -58.015404, -1.4512024, -17.092297)
+size = Vector3(14.133057, 6.7698364, 142.59541)
+material = SubResource("FogMaterial_n7i5v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="world/границы/FogVolume3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="world/границы/FogVolume3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -4.328987, 0.49594116, -4.074751)
+shape = SubResource("BoxShape3D_n7i5v")
+
+[node name="FogVolume4" type="FogVolume" parent="world/границы"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.63376, 0.52015686, 15.345892)
+size = Vector3(6.453064, 3.0403137, 6.0826416)
+material = SubResource("FogMaterial_p4e3b")
+
+[node name="кузачСнаружи" parent="world" instance=ExtResource("1_jwwum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10101557, 0, 11.0779505)
+
+[node name="асфальт" parent="world" instance=ExtResource("3_5rqk3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, 0, 11.115)
+
+[node name="окружение" type="Node3D" parent="world"]
+
+[node name="мусорки" type="Node3D" parent="world/окружение"]
+
+[node name="мусорка1" parent="world/окружение/мусорки" instance=ExtResource("9_qhojc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1139765, 4.7683716e-07, -3.25484)
+
+[node name="мусорка3" parent="world/окружение/мусорки" instance=ExtResource("9_qhojc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10.094805, 4.7683716e-07, 7.5982504)
+
+[node name="мусорка2" parent="world/окружение/мусорки" instance=ExtResource("9_qhojc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2110624, 4.7683716e-07, -3.25484)
+
+[node name="лавки" type="Node3D" parent="world/окружение"]
+
+[node name="лавка" parent="world/окружение/лавки" instance=ExtResource("10_h835n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.751263, 0.0004555583, 4.781808)
+
+[node name="лавка3" parent="world/окружение/лавки" instance=ExtResource("10_h835n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.845606, 0.0004555583, 6.4186363)
+
+[node name="лавка2" parent="world/окружение/лавки" instance=ExtResource("10_h835n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.751263, 0.0004555583, 8.233335)
+
+[node name="фонари" type="Node3D" parent="world/окружение"]
+
+[node name="фонарь" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.070615, -0.039438188, -3.6671867)
+
+[node name="фонарь5" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(0.97874945, 0, 0.2050598, 0, 1, 0, -0.2050598, 0, 0.97874945, 8.374103, -0.039438188, -3.6671867)
+
+[node name="фонарь6" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.275183, -0.039438188, -3.6671867)
+
+[node name="фонарь7" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.937996, -0.039438188, -3.6671867)
+
+[node name="фонарь8" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.58894, -0.039438188, -3.6671867)
+
+[node name="фонарь2" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.382904, -0.039438188, -3.6671867)
+
+[node name="фонарь4" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.934494, -0.039438188, -3.6671867)
+
+[node name="фонарь3" parent="world/окружение/фонари" instance=ExtResource("11_sxx71")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.999683, -0.039438188, -3.6671867)
+
+[node name="деревоСтатуяСветится" type="Node3D" parent="world/окружение"]
+
+[node name="деревоСтатуяСветитсяКрасный" parent="world/окружение/деревоСтатуяСветится" instance=ExtResource("8_pm81o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.93623, 0.002226591, 5.2508245)
+
+[node name="деревоСтатуяСветитсяКрасный2" parent="world/окружение/деревоСтатуяСветится" instance=ExtResource("8_pm81o")]
+transform = Transform3D(0.65753305, 0, -0.7534257, 0, 1, 0, 0.7534257, 0, 0.65753305, 21.28891, -0.04219979, 5.9172134)
+
+[node name="растительность" parent="world/окружение" instance=ExtResource("11_70ag4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+
+[node name="стелла" parent="world/окружение" instance=ExtResource("4_g4hte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.808876, -0.91830873, -40.609165)
+
+[node name="мерин" parent="world/окружение" instance=ExtResource("6_j3sab")]
+transform = Transform3D(0.99474937, 0, 0.102341145, 0, 1, 0, -0.102341145, 0, 0.99474937, 8.5223255, -0.5041716, -15.6944685)
+
+[node name="сузуки" parent="world/окружение" instance=ExtResource("7_l7a0y")]
+transform = Transform3D(0.93801, 0, -0.34660825, 0, 1, 0, 0.34660825, 0, 0.93801, -42.967133, -0.41821694, -39.24009)
+
+[node name="знакСтоянкаЗапрещена" parent="world/окружение" instance=ExtResource("12_70ag4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.356728, -1.1954093, -8.275569)
+
+[node name="кубСтатуя" parent="world/окружение" instance=ExtResource("13_gab25")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.35289, 0.0080097765, 5.6897583)
+
+[node name="TestCube" type="Node3D" parent="world"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.502003, -9.536743e-07, -16.772177)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="world/TestCube"]
+mesh = SubResource("BoxMesh_7iiha")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="world/TestCube"]
+script = ExtResource("16_p4e3b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="world/TestCube/StaticBody3D"]
+shape = SubResource("BoxShape3D_7w3by")
+
+[node name="player" parent="." instance=ExtResource("2_trs54")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.7144928, 1.8541093, 4.7533636)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="подсказки" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.99994
+offset_top = 8.5
+offset_right = 124.99994
+offset_bottom = 20.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(125, 11.5)
+theme_override_font_sizes/font_size = 8
+text = "подсказка"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.99994
+offset_top = -28.0
+offset_right = 124.99994
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(125, 11.5)
+theme_override_font_sizes/font_size = 8
+text = "субтитры"
+horizontal_alignment = 1
+autowrap_mode = 2

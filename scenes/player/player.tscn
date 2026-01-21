@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbjc82ahrxgs"]
+
+[ext_resource type="Script" uid="uid://j36mexocmgtn" path="res://scripts/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://bvmhajfw4r2bb" path="res://scripts/base/subtitle_manager.gd" id="2_dovo2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dovo2"]
+radius = 0.3
+height = 1.8
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_8afob")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_dovo2")
+
+[node name="SubtitleManager" type="Node" parent="."]
+script = ExtResource("2_dovo2")

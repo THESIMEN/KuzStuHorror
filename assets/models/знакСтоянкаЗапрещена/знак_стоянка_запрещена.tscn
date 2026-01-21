@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bagafawhw21f7"]
+
+[ext_resource type="PackedScene" uid="uid://ngyi7aojdbif" path="res://assets/models/знакСтоянкаЗапрещена/знакСтоянкаЗапрещена.glb" id="1_fmoim"]
+
+[node name="знакСтоянкаЗапрещена" instance=ExtResource("1_fmoim")]
+
+[node name="знакСтоянкаЗарещена" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.975, 0)

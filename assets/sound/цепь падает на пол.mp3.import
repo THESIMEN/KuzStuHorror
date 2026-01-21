@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvf5hvgn3a2fg"
+path="res://.godot/imported/цепь падает на пол.mp3-a7ed9af548f2c5a702cd84d04e6b504a.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/цепь падает на пол.mp3"
+dest_files=["res://.godot/imported/цепь падает на пол.mp3-a7ed9af548f2c5a702cd84d04e6b504a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
