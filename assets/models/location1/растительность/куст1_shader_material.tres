@@ -1,0 +1,87 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://v346k4s5skdg"]
+
+[ext_resource type="Texture2D" uid="uid://cg5tji8131tqg" path="res://assets/models/location1/растительность/растительность_кусты 2.png" id="1_ofkpv"]
+
+[sub_resource type="Shader" id="Shader_biglp"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.6.2.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_burley, specular_schlick_ggx, depth_prepass_alpha;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+
+	float t = TIME * 2.5;
+
+	// 🌿 мягкий шум (чуть более “объёмный”, чем трава)
+	float seed =
+		sin(VERTEX.x * 10.0 + VERTEX.z * 20.0) * 43758.5453;
+
+	seed = fract(seed);
+
+	float offset = seed * 10.2831;
+
+	// 🌬️ плавный ветер
+	float wind =
+		sin(t + offset + VERTEX.x * 0.8 + VERTEX.z * 0.8)
+		* 0.03;
+	float wind2 = sin(t * 1.7 + VERTEX.z * 2.0) * 0.015;
+		wind += wind2;
+	// 🌱 низ фиксирован, верх двигается
+	float height_mask = pow(clamp(VERTEX.y, 0.0, 1.0), 2.0);
+
+	// 🌿 итог
+	VERTEX.x += wind * height_mask;
+	VERTEX.z += wind * height_mask;
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+	ALPHA *= albedo.a * albedo_tex.a;
+}
+"
+
+[resource]
+resource_name = "Material.010"
+render_priority = 0
+shader = SubResource("Shader_biglp")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("1_ofkpv")
+shader_parameter/albedo_texture_size = Vector2i(512, 359)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dsevpkmtv4g4w"]
+
+[ext_resource type="PackedScene" uid="uid://dybixlems2a7d" path="res://assets/models/location1/стелла/стелла.glb" id="1_bfens"]
+[ext_resource type="Texture2D" uid="uid://cagd4nlnbolgf" path="res://assets/models/location1/стелла/стеллаBake.png" id="2_5rj52"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bfens"]
+albedo_texture = ExtResource("2_5rj52")
+
+[node name="стелла" instance=ExtResource("1_bfens")]
+
+[node name="стелла" parent="." index="0"]
+transform = Transform3D(1.7453237, 0, 0, 0, 0.8015529, 0, 0, 0, 1.7453237, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_bfens")

@@ -8,20 +8,39 @@ extends CharacterBody3D
 @onready var ray := $Camera3D/RayCast3D
 @onready var prompt_label: Label = $"../UI/подсказки"
 
+@onready var flashlight = $Camera3D/SpotLight/SpotLight3D
+var has_flashlight := true
+var flashlight_on := false
+
+var input_locked := false
+
 var has_checked_main_door := false
-var has_bolt_cutter := true
+
+var need_bolt_cutter := false
+var has_bolt_cutter := false
 
 var rotation_x: float = 0.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+
+
 func _unhandled_input(event):#Ескейп
-	# Переключение курсора по ESC
+	if input_locked:
+		return
+	
+	# Открытие меню на Esc
 	if Input.is_action_just_pressed("ui_cancel"):
+
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			$"../UI/EscMenu".show()
+			$"../UI/EscMenu".reset_menu()
+			set_physics_process(false)
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
+			$"../UI/EscMenu".hide()
+			set_physics_process(true)
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 	# Поворот камеры ТОЛЬКО когда мышь захвачена
@@ -74,3 +93,14 @@ func show_prompt(text: String):
 
 func hide_prompt():
 	prompt_label.visible = false
+
+func obtain_flashlight():
+	has_flashlight = true
+	
+func _input(event):
+	if event.is_action_pressed("flashlight"):
+		if not has_flashlight:
+			return
+
+		flashlight_on = !flashlight_on
+		flashlight.visible = flashlight_on

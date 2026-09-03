@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bbgw2uksxfuqo"]
+
+[ext_resource type="PackedScene" uid="uid://3i52bdjkdsh1" path="res://assets/models/location1/горшокПодсказка/запискаВГоршке.glb" id="1_hmemo"]
+[ext_resource type="Script" uid="uid://3kakduo5i5sd" path="res://scripts/scene1/gorshokFall/Note.gd" id="2_a4epc"]
+[ext_resource type="AudioStream" uid="uid://cusbfqxmvg1y2" path="res://assets/sound/ВзялиЗаписку.mp3" id="3_p1vwg"]
+[ext_resource type="AudioStream" uid="uid://cklld3c7wt18y" path="res://assets/sound/ПоложилиЗаписку.mp3" id="4_kdg4w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hmemo"]
+size = Vector3(4.0587997, 0.20495605, 3.5932083)
+
+[node name="запискаВГоршке" unique_id=984607058 instance=ExtResource("1_hmemo")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="записка" parent="." index="0"]
+transform = Transform3D(-0.035461687, -0.00092334, -0.031075945, 0.005515364, -0.14092477, -0.011332406, 0.02181856, 0.0341227, -0.04764307, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="записка" index="0" unique_id=1490905502]
+script = ExtResource("2_a4epc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="записка/StaticBody3D" index="0" unique_id=112615411]
+transform = Transform3D(0.9999999, 5.9604645e-08, -1.1920929e-07, -7.450581e-09, 0.9999993, 8.940697e-08, 2.682209e-07, 2.9802322e-08, 0.99999857, -0.10022332, -0.06903075, -0.1631891)
+shape = SubResource("BoxShape3D_hmemo")
+disabled = true
+
+[node name="ВзялиЗаписку" type="AudioStreamPlayer3D" parent="записка/StaticBody3D" index="1" unique_id=547472254]
+stream = ExtResource("3_p1vwg")
+
+[node name="ПоложилиЗаписку" type="AudioStreamPlayer3D" parent="записка/StaticBody3D" index="2" unique_id=298405703]
+stream = ExtResource("4_kdg4w")

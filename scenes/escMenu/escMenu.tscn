@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bdrahe45y5xcc"]
+
+[ext_resource type="Script" uid="uid://bilghygsyvfe5" path="res://scripts/base/esc_menu.gd" id="1_xwnwm"]
+
+[node name="escMenu" type="Control" unique_id=1782433450]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xwnwm")
+
+[node name="esc" type="Control" parent="." unique_id=247227254]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button1" type="Button" parent="esc" unique_id=133647756]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.5
+offset_top = -75.5
+offset_right = 34.5
+offset_bottom = -44.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "продолжить"
+
+[node name="Button2" type="Button" parent="esc" unique_id=2022073808]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -35.5
+offset_right = 27.5
+offset_bottom = -4.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "настройки
+"
+
+[node name="Button3" type="Button" parent="esc" unique_id=1878668327]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = 4.5
+offset_right = 10.5
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "выйти"
+
+[node name="setting" type="Control" parent="." unique_id=1410928598]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="setting" unique_id=2037598701]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.5
+offset_top = -91.5
+offset_right = -2.5
+offset_bottom = -68.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "чувстительность"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="setting" unique_id=79861424]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 5.5
+offset_top = -90.25
+offset_right = 74.5
+offset_bottom = -69.75
+grow_horizontal = 2
+grow_vertical = 2
+min_value = 0.001
+max_value = 0.01
+step = 0.001
+value = 0.001
+
+[connection signal="pressed" from="esc/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="esc/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="esc/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="value_changed" from="setting/HSlider" to="." method="_on_h_slider_value_changed"]

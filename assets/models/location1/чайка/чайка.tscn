@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d336i3ayy0t0v"]
+
+[ext_resource type="PackedScene" uid="uid://cefw365ut67qo" path="res://assets/models/location1/чайка/чайка.glb" id="1_64mcd"]
+
+[node name="чайка" unique_id=1468770494 instance=ExtResource("1_64mcd")]

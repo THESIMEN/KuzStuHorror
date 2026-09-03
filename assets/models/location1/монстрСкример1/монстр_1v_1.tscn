@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bwrrotlp011"]
+
+[ext_resource type="PackedScene" uid="uid://boi21xdypvu2h" path="res://assets/models/location1/монстрСкример1/монстр1v1.glb" id="1_dik1c"]
+
+[node name="монстр1v12" unique_id=1391042844 instance=ExtResource("1_dik1c")]
+
+[node name="монстр1v1" parent="." index="0" unique_id=563667625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

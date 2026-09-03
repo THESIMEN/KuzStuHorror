@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bx7vqd0yxxly7"]
+
+[ext_resource type="PackedScene" uid="uid://h5jadxgumop0" path="res://assets/models/location1/деревоСтатуяСветится/деревоСтатуяСветитсяКрасный.glb" id="1_sr8ot"]
+
+[node name="деревоСтатуяСветитсяКрасный" unique_id=1427354234 instance=ExtResource("1_sr8ot")]
+
+[node name="деревоСтатуяСветитсяКрасный" parent="." index="0" unique_id=1682654705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.558, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=1853529107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12625116, 1.6072918, -0.08679783)
+light_color = Color(0.7397895, 1.9372628e-06, 9.62615e-07, 1)
+light_volumetric_fog_energy = 0.3
+shadow_normal_bias = 1.5
+omni_range = 1.5

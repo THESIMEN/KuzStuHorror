@@ -1,0 +1,476 @@
+[gd_scene format=3 uid="uid://gaqh0j1gwu27"]
+
+[ext_resource type="PackedScene" uid="uid://bwiu1mcv54sjs" path="res://assets/models/location1/растительность/растительность.glb" id="1_6ptuc"]
+[ext_resource type="Material" uid="uid://cp1x2bw8wbaui" path="res://assets/models/location1/растительность/трава_shader_material.tres" id="2_dhyja"]
+[ext_resource type="Material" uid="uid://c120xx61j8drw" path="res://assets/models/location1/растительность/дерево1_shader_material.tres" id="2_flsor"]
+[ext_resource type="Material" uid="uid://d3yuy3pl7oeyp" path="res://assets/models/location1/растительность/дерево2_shader_material.tres" id="3_flsor"]
+[ext_resource type="Material" uid="uid://bn2f3aynw41wk" path="res://assets/models/location1/растительность/куст2_shader_material.tres" id="3_mdpw5"]
+[ext_resource type="Material" uid="uid://v346k4s5skdg" path="res://assets/models/location1/растительность/куст1_shader_material.tres" id="4_qgi37"]
+[ext_resource type="Material" uid="uid://bkg86317rhjok" path="res://assets/models/location1/растительность/куст3_shader_material.tres" id="5_wdhpl"]
+
+[node name="растительность" unique_id=1934286828 instance=ExtResource("1_6ptuc")]
+
+[node name="трава" parent="." index="0" unique_id=2041807465]
+surface_material_override/3 = ExtResource("2_dhyja")
+
+[node name="куст" parent="." index="1" unique_id=1930419635]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_001" parent="." index="2" unique_id=780554836]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_002" parent="." index="3" unique_id=1409270320]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_004" parent="." index="5" unique_id=431206252]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_005" parent="." index="6" unique_id=1709305182]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_006" parent="." index="7" unique_id=41969368]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_007" parent="." index="8" unique_id=325052808]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_008" parent="." index="9" unique_id=327115334]
+transform = Transform3D(-1.1282663, 9.863618e-08, 0, -9.863618e-08, -1.1282663, 0, 0, 0, 1.1282663, 43.785213, -0.23231268, -15.217712)
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_009" parent="." index="10" unique_id=77394374]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_010" parent="." index="11" unique_id=402216315]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_011" parent="." index="12" unique_id=1181309099]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_012" parent="." index="13" unique_id=659036015]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_013" parent="." index="14" unique_id=1476274021]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_014" parent="." index="15" unique_id=2114082038]
+transform = Transform3D(1.1282663, 0, 0, 0, -1.1282663, 9.863618e-08, 0, -9.863618e-08, -1.1282663, 28.39426, -0.23231173, -17.690231)
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_015" parent="." index="16" unique_id=1077351918]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_016" parent="." index="17" unique_id=638195474]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_017" parent="." index="18" unique_id=1449337331]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_018" parent="." index="19" unique_id=404757516]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_019" parent="." index="20" unique_id=973943130]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_020" parent="." index="21" unique_id=1246532527]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_021" parent="." index="22" unique_id=2135751996]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_022" parent="." index="23" unique_id=607799128]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_023" parent="." index="24" unique_id=304991870]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_024" parent="." index="25" unique_id=1651121887]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_025" parent="." index="26" unique_id=560340051]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_026" parent="." index="27" unique_id=529734377]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_027" parent="." index="28" unique_id=1435943483]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_028" parent="." index="29" unique_id=1879116554]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_029" parent="." index="30" unique_id=281493518]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="дерево" parent="." index="31" unique_id=2132154014]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_001" parent="." index="32" unique_id=229004024]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="куст_030" parent="." index="33" unique_id=600759779]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_031" parent="." index="34" unique_id=2022427224]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_032" parent="." index="35" unique_id=1465080065]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_033" parent="." index="36" unique_id=833572212]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_034" parent="." index="37" unique_id=1592933784]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_035" parent="." index="38" unique_id=283210422]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_036" parent="." index="39" unique_id=1903538642]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_037" parent="." index="40" unique_id=703433721]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_038" parent="." index="41" unique_id=108595025]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_039" parent="." index="42" unique_id=1643402501]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_040" parent="." index="43" unique_id=1386720237]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_041" parent="." index="44" unique_id=1960865814]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_042" parent="." index="45" unique_id=1037933162]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_043" parent="." index="46" unique_id=1261591513]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_044" parent="." index="47" unique_id=184951410]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_045" parent="." index="48" unique_id=991753690]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_046" parent="." index="49" unique_id=33411621]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_047" parent="." index="50" unique_id=1643356529]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_048" parent="." index="51" unique_id=278503313]
+transform = Transform3D(1.1282663, 0, 0, 0, -1.1282663, 9.863618e-08, 0, -9.863618e-08, -1.1282663, -27.922493, -0.40913248, -18.053833)
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_049" parent="." index="52" unique_id=775546441]
+transform = Transform3D(1.1282663, 0, 0, 0, -1.1282663, -9.863618e-08, 0, 9.863618e-08, -1.1282663, -27.96429, -0.19325495, -17.21289)
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_050" parent="." index="53" unique_id=58933766]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_051" parent="." index="54" unique_id=1492007017]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_052" parent="." index="55" unique_id=196293974]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_053" parent="." index="56" unique_id=1996259250]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_054" parent="." index="57" unique_id=195993220]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_055" parent="." index="58" unique_id=1489944557]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_056" parent="." index="59" unique_id=45023636]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_057" parent="." index="60" unique_id=1346636126]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_058" parent="." index="61" unique_id=1000632296]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_059" parent="." index="62" unique_id=708456668]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_060" parent="." index="63" unique_id=545677923]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_061" parent="." index="64" unique_id=1648708456]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_062" parent="." index="65" unique_id=704561174]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_063" parent="." index="66" unique_id=869060489]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_064" parent="." index="67" unique_id=905429647]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_065" parent="." index="68" unique_id=1254093090]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_066" parent="." index="69" unique_id=424792371]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_067" parent="." index="70" unique_id=141272570]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_068" parent="." index="71" unique_id=833226998]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_069" parent="." index="72" unique_id=2009546097]
+transform = Transform3D(1.1282663, 0, 0, 0, 1.1282663, 0, 0, 0, 1.1282663, -47.14748, -0.66808033, -46.521225)
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_070" parent="." index="73" unique_id=2111275701]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_071" parent="." index="74" unique_id=562404979]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_072" parent="." index="75" unique_id=450456702]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_073" parent="." index="76" unique_id=1535195697]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_074" parent="." index="77" unique_id=333794032]
+surface_material_override/1 = ExtResource("3_mdpw5")
+
+[node name="куст_075" parent="." index="78" unique_id=348949369]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_079" parent="." index="82" unique_id=2123120776]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_080" parent="." index="83" unique_id=704306783]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_082" parent="." index="85" unique_id=233636192]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_083" parent="." index="86" unique_id=2112782395]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_084" parent="." index="87" unique_id=94480159]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="дерево_002" parent="." index="88" unique_id=1407097015]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_003" parent="." index="89" unique_id=923070165]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_004" parent="." index="90" unique_id=1195227029]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="куст_085" parent="." index="91" unique_id=1994565842]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="дерево_008" parent="." index="95" unique_id=988481439]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="куст_086" parent="." index="96" unique_id=1919936462]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_087" parent="." index="97" unique_id=55920159]
+transform = Transform3D(1.1282663, 0, 0, 0, -1.1282663, 9.863618e-08, 0, -9.863618e-08, -1.1282663, -6.474452, -0.5900022, -17.943312)
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_088" parent="." index="98" unique_id=1039905957]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_089" parent="." index="99" unique_id=848335805]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="дерево_009" parent="." index="100" unique_id=1978052734]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_010" parent="." index="101" unique_id=1966150353]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_011" parent="." index="102" unique_id=1637756805]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_012" parent="." index="103" unique_id=933819144]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_013" parent="." index="104" unique_id=1660430807]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_014" parent="." index="105" unique_id=1961303690]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_015" parent="." index="106" unique_id=155521586]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_016" parent="." index="107" unique_id=498355539]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_017" parent="." index="108" unique_id=137986742]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_018" parent="." index="109" unique_id=533331048]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_019" parent="." index="110" unique_id=1251103959]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_020" parent="." index="111" unique_id=148621890]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_021" parent="." index="112" unique_id=1678717151]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_022" parent="." index="113" unique_id=1693891432]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_023" parent="." index="114" unique_id=898912907]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_025" parent="." index="116" unique_id=1081057909]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_027" parent="." index="118" unique_id=1555895828]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_028" parent="." index="119" unique_id=232886123]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_029" parent="." index="120" unique_id=438347783]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_030" parent="." index="121" unique_id=1365258601]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_031" parent="." index="122" unique_id=1670009568]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_032" parent="." index="123" unique_id=827850714]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_033" parent="." index="124" unique_id=1537440396]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_034" parent="." index="125" unique_id=1421828974]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_035" parent="." index="126" unique_id=1018759468]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_036" parent="." index="127" unique_id=497237083]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_037" parent="." index="128" unique_id=1767106122]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_038" parent="." index="129" unique_id=310199236]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_039" parent="." index="130" unique_id=415056842]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_040" parent="." index="131" unique_id=994770909]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="куст_090" parent="." index="132" unique_id=960569857]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_091" parent="." index="133" unique_id=1027520718]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_092" parent="." index="134" unique_id=1228493081]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_093" parent="." index="135" unique_id=1158181197]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_094" parent="." index="136" unique_id=705942846]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_095" parent="." index="137" unique_id=326887188]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_096" parent="." index="138" unique_id=2072660481]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_097" parent="." index="139" unique_id=115654878]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_098" parent="." index="140" unique_id=1993712049]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_099" parent="." index="141" unique_id=61932534]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_100" parent="." index="142" unique_id=1429899999]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_101" parent="." index="143" unique_id=608088669]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_102" parent="." index="144" unique_id=1217174040]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_103" parent="." index="145" unique_id=266329251]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_104" parent="." index="146" unique_id=909044803]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_105" parent="." index="147" unique_id=361374192]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_106" parent="." index="148" unique_id=1693710474]
+surface_material_override/0 = ExtResource("3_mdpw5")
+
+[node name="куст_107" parent="." index="149" unique_id=197895151]
+surface_material_override/0 = ExtResource("4_qgi37")
+
+[node name="куст_108" parent="." index="150" unique_id=807415849]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_109" parent="." index="151" unique_id=1425438482]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_110" parent="." index="152" unique_id=1933965288]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="куст_111" parent="." index="153" unique_id=605976367]
+surface_material_override/0 = ExtResource("5_wdhpl")
+
+[node name="дерево_041" parent="." index="158" unique_id=910526046]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_042" parent="." index="159" unique_id=927715561]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_043" parent="." index="160" unique_id=1868907055]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_045" parent="." index="162" unique_id=1035856717]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_046" parent="." index="163" unique_id=1229436431]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_047" parent="." index="164" unique_id=378190712]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_048" parent="." index="165" unique_id=1798298767]
+surface_material_override/1 = ExtResource("3_flsor")
+
+[node name="дерево_049" parent="." index="166" unique_id=1970502687]
+surface_material_override/1 = ExtResource("2_flsor")
+
+[node name="дерево_050" parent="." index="167" unique_id=2050470399]
+surface_material_override/1 = ExtResource("3_flsor")

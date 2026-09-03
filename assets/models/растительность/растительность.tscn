@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl7pri7s1tffi"]
-
-[ext_resource type="PackedScene" uid="uid://b5sktejyy2bao" path="res://assets/models/растительность/Растительность.glb" id="1_vi3w1"]
-
-[node name="Растительность2" instance=ExtResource("1_vi3w1")]

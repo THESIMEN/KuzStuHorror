@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dui7ys6s5sixy"]
+
+[ext_resource type="Texture2D" uid="uid://dkrohqbxq2gr7" path="res://assets/scrimers/scene1/scare1/глазаСтрашные.png" id="1_qicpa"]
+[ext_resource type="AudioStream" uid="uid://co1rru60vax3p" path="res://assets/sound/leopolds-screamer.mp3" id="2_bvuu0"]
+[ext_resource type="PackedScene" uid="uid://bwrrotlp011" path="res://assets/models/location1/монстрСкример1/монстр_1v_1.tscn" id="3_8jama"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvuu0"]
+transparency = 1
+albedo_texture = ExtResource("1_qicpa")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 0.01
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8jama"]
+size = Vector2(0.5, 0.5)
+
+[node name="ScareZone1" type="Node3D" unique_id=1699264570]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1364776349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.094616294, -4.1358095e-09)
+material_override = SubResource("StandardMaterial3D_bvuu0")
+mesh = SubResource("PlaneMesh_8jama")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=2135259300]
+stream = ExtResource("2_bvuu0")
+
+[node name="монстр1v12" parent="." unique_id=1391042844 instance=ExtResource("3_8jama")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.001104325, -0.25466758, 1.2005014)

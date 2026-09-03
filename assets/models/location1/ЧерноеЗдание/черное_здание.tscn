@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bn5hp5ork8kqj"]
+
+[ext_resource type="PackedScene" uid="uid://y2rt1v17hw2l" path="res://assets/models/location1/ЧерноеЗдание/ЧерноеЗдание.glb" id="1_6pdvv"]
+
+[node name="ЧерноеЗдание2" unique_id=374770718 instance=ExtResource("1_6pdvv")]
+
+[node name="ЧерноеЗдание" parent="." index="0" unique_id=1464554879]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 102.76, 1, -14.518)
+
+[node name="Cube_006" parent="ЧерноеЗдание" index="0" unique_id=1653737741]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.192398, -0.49619395, -31.205399)

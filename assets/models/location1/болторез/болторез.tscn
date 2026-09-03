@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bd0a7yqwr0qwc"]
+
+[ext_resource type="PackedScene" uid="uid://x4dw3sey4d30" path="res://assets/models/location1/болторез/болторез.glb" id="1_wjjy8"]
+[ext_resource type="Script" uid="uid://ds5x74cxdd1ac" path="res://assets/models/location1/болторез/BoltCutter.gd" id="2_keiim"]
+[ext_resource type="AudioStream" uid="uid://dpbcilgicpe6q" path="res://assets/sound/Звук приобретения предметов в виртуальной игре.mp3" id="3_823mh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wjjy8"]
+size = Vector3(0.20654297, 0.09375, 0.9259033)
+
+[node name="болторез" unique_id=505866431 instance=ExtResource("1_wjjy8")]
+
+[node name="Cube_003" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=16290977]
+script = ExtResource("2_keiim")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=717828898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012207031, 0.0048828125, -0.03704834)
+shape = SubResource("BoxShape3D_wjjy8")
+
+[node name="подобрали" type="AudioStreamPlayer3D" parent="StaticBody3D" index="1" unique_id=212155094]
+stream = ExtResource("3_823mh")

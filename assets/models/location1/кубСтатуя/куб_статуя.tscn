@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c0dl7c1wofnf4"]
+
+[ext_resource type="PackedScene" uid="uid://cljasgo3kgmp8" path="res://assets/models/location1/кубСтатуя/кубСтатуя.glb" id="1_5go5a"]
+
+[node name="кубСтатуя2" unique_id=1138167336 instance=ExtResource("1_5go5a")]
+
+[node name="кубСтатуя" parent="." index="0" unique_id=921968091]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0.28010195, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="1" unique_id=1887483541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03382752, 1.6509583, -0.72924495)
+light_color = Color(1, 0, 0, 1)
+shadow_enabled = true
+shadow_normal_bias = 1.5
+omni_range = 0.6
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." index="2" unique_id=387051093]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03382752, 1.2653103, -0.6676216)
+light_color = Color(1, 1, 0, 1)
+shadow_enabled = true
+shadow_normal_bias = 1.5
+omni_range = 0.6

@@ -1,23 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbjc82ahrxgs"]
+[gd_scene format=3 uid="uid://cbjc82ahrxgs"]
 
 [ext_resource type="Script" uid="uid://j36mexocmgtn" path="res://scripts/player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://bvmhajfw4r2bb" path="res://scripts/base/subtitle_manager.gd" id="2_dovo2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dovo2"]
 radius = 0.3
-height = 1.8
+height = 1.7
 
-[node name="player" type="CharacterBody3D"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dovo2"]
+radius = 0.3
+height = 1.7
+
+[node name="player" type="CharacterBody3D" unique_id=155843357]
 script = ExtResource("1_8afob")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2044393540]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+[node name="SpotLight" type="Node3D" parent="Camera3D" unique_id=578407900]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/SpotLight" unique_id=1479652100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.91431236)
+light_color = Color(1, 0.9196139, 0.94038653, 1)
+light_energy = 4.0
+light_volumetric_fog_energy = 0.1
+shadow_enabled = true
+shadow_bias = 0.05
+shadow_normal_bias = 1.5
+spot_range = 100.0
+spot_angle = 30.0
+spot_angle_attenuation = 3.0
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1363495700]
 target_position = Vector3(0, 0, -2)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1386862377]
 shape = SubResource("CapsuleShape3D_dovo2")
 
-[node name="SubtitleManager" type="Node" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1096093617]
+visible = false
+mesh = SubResource("CapsuleMesh_dovo2")
+
+[node name="SubtitleManager" type="Node" parent="." unique_id=2094276733]
 script = ExtResource("2_dovo2")

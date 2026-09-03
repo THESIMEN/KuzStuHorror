@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dmwh0p8j3htmg"]
+
+[ext_resource type="PackedScene" uid="uid://c0418nj4xg6tv" path="res://assets/models/location1/фонарь/фонарь.glb" id="1_rl1mn"]
+[ext_resource type="Texture2D" uid="uid://cm2il8151ogkf" path="res://assets/models/location1/фонарь/фонарь_ФонарьСветBake.png" id="2_rcoyn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_56mne"]
+resource_name = "ФонарьСвет"
+cull_mode = 2
+albedo_texture = ExtResource("2_rcoyn")
+emission_enabled = true
+emission = Color(0.7549721, 0.999847, 0.9154076, 1)
+
+[node name="фонарь" unique_id=2085421357 instance=ExtResource("1_rl1mn")]
+
+[node name="Cylinder_003" parent="." index="0" unique_id=1593274652]
+transform = Transform3D(0.41180927, 0, 0, 0, 0.65415686, 0, 0, 0, 0.41180927, 0, 0.19297662, 0)
+
+[node name="Sphere_001" parent="Cylinder_003" index="0" unique_id=1162590818]
+transform = Transform3D(4.439476, 0, 0, 0, 2.7947688, 0, 0, 0, 4.439476, 0, 5.3118653, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_56mne")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Cylinder_003/Sphere_001" index="0" unique_id=263676853]
+transform = Transform3D(0.5469809, 0, 0, 0, 0.546981, 0, 0, 0, 0.5469809, 0.3811948, 0, 0.0042250366)
+light_color = Color(0.9999997, 0.92708445, 0.9865151, 1)
+light_energy = 0.3
+light_volumetric_fog_energy = 0.05
+shadow_normal_bias = 1.5
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Cylinder_003/Sphere_001" index="1" unique_id=1319582430]
+transform = Transform3D(0.5469809, 0, 0, 0, 0.546981, 0, 0, 0, 0.5469809, -0.3875589, 0, 0.0042250366)
+light_color = Color(0.9999997, 0.92708445, 0.9865151, 1)
+light_energy = 0.3
+light_volumetric_fog_energy = 0.05
+shadow_normal_bias = 1.5
